@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout & setInterval</title>
+</head>
+
+<body>
+
+    <h1>Find the min and max of the names in an given problem by using setInterval and timeout methods</h1>
+
+
+
+    <script>
+
+        let names = ["adnan", "thaseen", "afraz", "muddu"];
+
+        function findminmaxnames(){
+            let minlength = Infinity;
+            let maxlength = -Infinity;
+            let minname = '';
+            let maxname = '';
+
+            names.forEach((name) => {
+            const length = name.length;
+            
+            if (length < minlength){
+                minlength = length;
+                minname = name;
+            }
+
+            if (length > maxlength){
+                maxlength = length;
+                maxname = name;
+            }
+        });
+
+        document.write("minname : ", minname);
+        document.write("<br>");
+        document.write("maxname : ", maxname);
+        }
+
+        findminmaxnames();
+
+
+    </script>
+
+</body>
+
+</html>
